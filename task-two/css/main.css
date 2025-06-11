@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+
+:root {
+  --back-color: #dadbf1;
+  --sign-color: #4C5FD5;
+}
+
+.parent .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.parent .nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 0.5;
+  margin: 25px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.parent .nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  color: white;
+}
+
+.parent .nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.parent .nav ul li input {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  height: 30px;
+}
+
+.parent .nav ul li:nth-child(3) input {
+  width: 190px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.parent .nav ul li:nth-child(4) input {
+  width: 150px;
+  background-color: var(--sign-color);
+  color: white;
+  border: 2px solid white;
+  text-align: center;
+}
+
+.parent .nav ul li input::placeholder {
+  padding-left: 10px;
+}
+
+.parent .help {
+  background-color: var(--back-color);
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.parent .help form {
+  margin-top: 50px;
+  position: relative;
+}
+
+.parent .help form input {
+  width: 300px;
+  padding: 15px;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.parent .help form::after {
+  position: absolute;
+  content: "";
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+  border-width: 10px;
+  top: 15px;
+  right: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+}
+
+.card-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-content p {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.card-content a {
+  color: #4a5ee5;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.6;
+  flex-wrap: wrap;
+  padding: 25px;
+  background-color: black;
+  color: white;
+}
+
+footer p a {
+  text-decoration: none;
+  color: white;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+@media(max-width:600px) {
+  .parent .nav ul {
+    justify-content: center;
+  }
+
+  .parent .nav ul li {
+    margin: 5px;
+  }
+
+  .parent .nav ul li:nth-child(3) input {
+    width: 160px;
+  }
+}
